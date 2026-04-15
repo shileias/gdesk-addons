@@ -10,6 +10,12 @@ type UserInfo struct {
 	Email string `json:"email"`
 }
 
+// 调试的操作窗口
+func debug() {
+	a := windows.GetApp()
+	a.MainWindow().Hide()
+}
+
 //gdesk:bind Example
 func Example(name string) (string, error) {
 	return "Hello from plugin demo, " + name, nil
